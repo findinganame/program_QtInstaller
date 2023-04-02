@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/ico">
+        <file>images/ico_exit.ico</file>
+        <file>images/ico_main.ico</file>
+        <file>images/ico_run.ico</file>
+    </qresource>
+</RCC>

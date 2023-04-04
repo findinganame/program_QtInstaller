@@ -57,11 +57,19 @@ void QtInstaller::on_btn2_clicked(){
     writeFlag("2");
 }
 
-void QtInstaller::on_btn3_clicked()
-{std::system(R"()");writeFlag("3");}
+void QtInstaller::on_btn3_clicked(){
+    QDir::setCurrent("C:\\Qt\\5.12.3\\mingw73_64\\bin");
+    std::system(strCmd.toStdString().c_str());
+    QDir::setCurrent(releasePath);
+    writeFlag("3");
+}
 
-void QtInstaller::on_btn4_clicked()
-{std::system(R"(C:\Windows\System32\cmd.exe /A /Q /K C:\Qt\6.4.2\mingw_64\bin\qtenv2.bat)");writeFlag("4");}
+void QtInstaller::on_btn4_clicked(){
+    QDir::setCurrent("C:\\Qt\\6.4.2\\mingw_64\\bin");
+    std::system(strCmd.toStdString().c_str());
+    QDir::setCurrent(releasePath);
+    writeFlag("4");
+}
 
 void QtInstaller::on_btn6_clicked(){
     QDir::setCurrent("D:\\Qt\\6.4.2\\mingw_64\\bin");
